@@ -4,6 +4,7 @@ import PriceListing from "./PriceListing"
 import PracticeAreas from "./PracticeAreas"
 import Testimonials from "./Testimonials"
 import Attorneys from "./Attorneys"
+import CallToAction from "./CallToAction"
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
     <PracticeAreas />
     <Testimonials />
     <Attorneys />
+    <CallToAction />
 
     </>
   )

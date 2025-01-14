@@ -1,4 +1,4 @@
-import chain from './assets/chain.png'
+import chain from './assets/did.png'
 const PriceListing = () => {
     return(
         <section className=" section price_listing">
