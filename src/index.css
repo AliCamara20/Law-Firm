@@ -476,6 +476,20 @@ header{
   font-size: 1rem;
   display: block;
 }
+
+.ctl_section{
+  background-color: var(--secondart-color);
+}
+
+.ctl_text{
+  font-size: 1.2rem;
+  color: #fff;
+}
+.ctl_btn{
+  width: 100%;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
 @media(min-width: 1000px){
   .row{
     display: flex;
