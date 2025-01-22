@@ -270,6 +270,7 @@ header{
 }
 .desc_info{
   color: #fff;
+  font-size: .9rem;
 }
 
 .contact_btn{
@@ -354,7 +355,7 @@ header{
   font-size: 1.2rem;
 }
 .grid_info{
-  font-size: clamp(1.1rem, .875rem + 1vw, 1.3rem) ;
+  font-size: clamp(1rem, .875rem + 1vw, 1.143rem) ;
 }
 
 .testimonials{
@@ -721,6 +722,12 @@ left: 0;
   opacity: .7;
   font-family: 'Montserrat', sans-serif;
   font-size: .9rem;
+  font-weight: 200;
+}
+
+.footer_pg a:hover{
+  opacity: 1;
+  text-decoration: underline;
 }
 
 .footer_link{
@@ -757,6 +764,9 @@ input{
   border: 1px solid #fff;
   color: #fff;
   border-radius: 4px;
+  font-family: var(--sans-serif);
+  cursor: pointer;
+  margin: 2em 0;
 }
 
 .footer_col + .footer_col{

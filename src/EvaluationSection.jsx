@@ -1,4 +1,4 @@
-import eval_hero from './assets/hand_shake.jpg'
+import eval_hero from './assets/scott.jpg'
 
 const EvaluationSection = () => {
     return(
