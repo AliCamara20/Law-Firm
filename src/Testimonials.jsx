@@ -52,10 +52,8 @@ const Testimonials = () => {
         setActiveIndex(3);
     }
     
-    console.log(activeIndex)
     
      useLayoutEffect(() => {
-        console.log( 'scrollLeft: ' + containerRef.current.scrollLeft);
        
         intervalRef.current =  setInterval(() => {
             containerRef.current.scrollLeft  = (containerRef.current.scrollLeft + (containerRef.current.scrollWidth / 4)) % (containerRef.current.scrollWidth)
