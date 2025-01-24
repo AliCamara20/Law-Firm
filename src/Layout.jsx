@@ -44,8 +44,11 @@ const Layout = () => {
         <section className="layout" ref={swipeRef}>
             <VisibilityContext.Provider value={handleShow}>
                 <SwipeContext.Provider value={handleSwipe}>
-                    {isVisible ? (<SearchSection onClose={handleClose} />) :(
+                    {isVisible ? (
+                      <SearchSection onClose={handleClose} />
+                    ) :(
                         <>
+
                         <Home />
                         <About />
                         <PriceListing />
@@ -57,7 +60,7 @@ const Layout = () => {
                         <EvaluationSection />
                         <PurchaseSection />
                         <Footer />
-                        </>
+                      </>
                             
                     )}
                 </SwipeContext.Provider>
