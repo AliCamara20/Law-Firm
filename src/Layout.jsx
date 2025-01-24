@@ -12,15 +12,13 @@ import EvaluationSection from "./EvaluationSection"
 import PurchaseSection from "./PurchaseSection"
 import Footer from "./Footer"
 import SearchSection from "./SearchSection"
-import { BlogPosts } from "./Blogs"
+import { flushSync } from "react-dom"
 
 const Layout = () => {
 
     const[isVisible, setIsVisible] = useState(false); 
     const swipeRef = useRef(null);
     
-    
-  
     const handleClose =  () => {
       setIsVisible(false);
     }
@@ -28,38 +26,44 @@ const Layout = () => {
       e.preventDefault();
       setIsVisible(true);
     }
-    const handleSwipe = e => {
+    const handleSwipe = (e, childIndex) => {
       e.preventDefault();
+      flushSync( () => {
+        swipeRef.current.children[childIndex].scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center'
+      } )
       
-      swipeRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'center'
       })
         
+      console.log(swipeRef.current.children[4]);
         
     }
     return(
-      <VisibilityContext.Provider value={handleShow}>
-        <SwipeContext.Provider value={handleSwipe}>
-          {isVisible ? (<SearchSection onClose={handleClose} />) :(
-            <>
-              <Home />
-              <About />
-              <PriceListing />
-              <PracticeAreas />
-              <Testimonials />
-              <Attorneys />
-              <CallToAction />
-              <BlogPosts ref={swipeRef} />
-              <EvaluationSection />
-              <PurchaseSection />
-              <Footer />
-            </>
-                
-          )}
-        </SwipeContext.Provider>
-      </VisibilityContext.Provider>
+        <section className="layout" ref={swipeRef}>
+            <VisibilityContext.Provider value={handleShow}>
+                <SwipeContext.Provider value={handleSwipe}>
+                    {isVisible ? (<SearchSection onClose={handleClose} />) :(
+                        <>
+                        <Home />
+                        <About />
+                        <PriceListing />
+                        <PracticeAreas />
+                        <Testimonials />
+                        <Attorneys />
+                        <CallToAction />
+                        <Blogs />
+                        <EvaluationSection />
+                        <PurchaseSection />
+                        <Footer />
+                        </>
+                            
+                    )}
+                </SwipeContext.Provider>
+            </VisibilityContext.Provider>
+        </section>
+      
   
       
       

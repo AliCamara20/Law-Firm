@@ -5,60 +5,11 @@ import calendar from './assets/calendar.svg'
 import facebook from './assets/facebook.svg'
 import twitter from './assets/twitter.svg'
 import right_chevron from './assets/right_chevron.svg'
-import { forwardRef } from 'react'
 
-export const BlogPosts = forwardRef((props, ref) => {
-    return(
-        <section className="section blogs"  ref={ref} {...props} >
-            <h2 className="section_title">
-                Latest Blog Posts
-            </h2>
-            <div className="container column_row">
-                <Blog imgSrc={blog1} >
-                    <h5 className="blog_header">We won against criminal</h5>
-                    <p className="published_date">
-                        <img src={calendar} alt='' className='calendar'/>
-                        <span className="date">12 Aug 2023</span>
-                    </p>
-                    <p className="blog_text">
-                        In this Kidnapping the unlawful taking 
-                        away or transportation of person against 
-                        that person's will unlawfully
-                    </p>
-                </Blog>
-                <Blog imgSrc={blog2}>
-                    <h5 className="blog_header">Legal issues regarding paternity</h5>
-                    <p className="published_date">
-                        <img src={calendar} alt="" className='calendar'/>
-                        <span className="date">12 Aug 2023</span>
-                    </p>
-                    <p className="blog_text">
-                        In this Kidnapping the unlawful taking 
-                        away or transportation of person against 
-                        that person's will unlawfully
-                    </p>
-                </Blog>
 
-                <Blog imgSrc={blog3}>
-                    <h5 className="blog_header">Judgement, Unfair business</h5>
-                    <p className="published_date">
-                        <img src={calendar} alt="" className='calendar' />
-                        <span className="date">12 Aug 2023</span>
-                    </p>
-                    <p className="blog_text">
-                        In this Kidnapping the unlawful taking 
-                        away or transportation of person against 
-                        that person's will unlawfully
-                    </p>
-                </Blog>
-            </div>
-            
-        </section>
-    )
-})
-const Blogs =  ({ref}) => {
+const Blogs =  () => {
         return(
-            <section className="section blogs"  ref={ref} >
+            <section className="section blogs">
                 <h2 className="section_title">
                     Latest Blog Posts
                 </h2>
