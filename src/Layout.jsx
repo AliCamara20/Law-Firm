@@ -30,9 +30,9 @@ const Layout = () => {
       e.preventDefault();
       flushSync( () => {
         swipeRef.current.children[childIndex].scrollIntoView({
-            behavior: 'smooth',
-            block: 'nearest',
-            inline: 'center'
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'center'
       } )
       
       })
